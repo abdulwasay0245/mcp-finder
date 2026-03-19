@@ -2,15 +2,19 @@ import { notFound } from 'next/navigation'
 import Link from 'next/link'
 import type { MCPServer } from '@/types'
 import ConfigGenerator from '@/components/ConfigGenerator'
+import { supabaseAdmin } from '@/lib/supabase-admin'
 
 async function getServer(id: string): Promise<MCPServer | null> {
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3000'
-  const res = await fetch(`${baseUrl}/api/servers`, {
-    next: { revalidate: 3600 }
-  })
-  if (!res.ok) return null
-  const servers: MCPServer[] = await res.json()
-  return servers.find(s => s.id === id) ?? null
+  const { data, error } = await supabaseAdmin
+    .from('mcp_servers')
+    .select(
+      'id, name, description, category, tags, use_cases, github_url, npm_package, supported_os, supported_editors, config_template, stars'
+    )
+    .eq('id', id)
+    .single()
+
+  if (error || !data) return null
+  return data
 }
 
 export async function generateMetadata({

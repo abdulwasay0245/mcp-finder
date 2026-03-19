@@ -1,15 +1,21 @@
 import SearchPage from '@/components/Searchpage'
+import { supabaseAdmin } from '@/lib/supabase-admin'
 import type { MCPServer } from '@/types'
 
 async function getServers(): Promise<MCPServer[]> {
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL ?? 'http://localhost:3000'
+  const { data, error } = await supabaseAdmin
+    .from('mcp_servers')
+    .select(
+      'id, name, description, category, tags, use_cases, github_url, npm_package, supported_os, supported_editors, config_template, stars'
+    )
+    .order('stars', { ascending: false })
 
-  const res = await fetch(`${baseUrl}/api/servers`, {
-    next: { revalidate: 3600 }
-  })
+  if (error) {
+    console.error('Failed to fetch servers:', error.message)
+    return []
+  }
 
-  if (!res.ok) return []
-  return res.json()
+  return data ?? []
 }
 
 export default async function Home() {
