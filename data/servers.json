@@ -1,0 +1,877 @@
+[
+  {
+    "name": "Gmail",
+    "description": "Connect your AI to Gmail to read, send, search and manage emails and drafts",
+    "category": "Communication",
+    "tags": ["email", "gmail", "google", "inbox", "send", "read", "draft"],
+    "use_cases": [
+      "read emails from inbox",
+      "send an email to someone",
+      "search through past emails",
+      "create email drafts",
+      "manage email labels",
+      "check unread messages",
+      "automate email replies",
+      "delete or archive emails"
+    ],
+    "github_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/gmail",
+    "npm_package": "@modelcontextprotocol/server-gmail",
+    "supported_os": ["mac", "windows", "linux"],
+    "supported_editors": ["claude", "cursor", "vscode"],
+    "config_template": {
+      "mcpServers": {
+        "gmail": {
+          "command": "npx",
+          "args": ["-y", "@modelcontextprotocol/server-gmail"],
+          "env": {
+            "GMAIL_CLIENT_ID": "YOUR_GMAIL_CLIENT_ID",
+            "GMAIL_CLIENT_SECRET": "YOUR_GMAIL_CLIENT_SECRET",
+            "GMAIL_REDIRECT_URI": "YOUR_REDIRECT_URI"
+          }
+        }
+      }
+    },
+    "stars": 1200
+  },
+  {
+    "name": "GitHub",
+    "description": "Interact with GitHub repositories, issues, pull requests, commits and code search",
+    "category": "Dev Tools",
+    "tags": ["github", "git", "repository", "pr", "issues", "code", "commits", "branches"],
+    "use_cases": [
+      "read and search code in a repository",
+      "create or update GitHub issues",
+      "open or review pull requests",
+      "list recent commits",
+      "create a new repository",
+      "search across GitHub",
+      "manage branches",
+      "comment on pull requests"
+    ],
+    "github_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/github",
+    "npm_package": "@modelcontextprotocol/server-github",
+    "supported_os": ["mac", "windows", "linux"],
+    "supported_editors": ["claude", "cursor", "vscode", "windsurf"],
+    "config_template": {
+      "mcpServers": {
+        "github": {
+          "command": "npx",
+          "args": ["-y", "@modelcontextprotocol/server-github"],
+          "env": {
+            "GITHUB_PERSONAL_ACCESS_TOKEN": "YOUR_GITHUB_TOKEN"
+          }
+        }
+      }
+    },
+    "stars": 4800
+  },
+  {
+    "name": "Notion",
+    "description": "Read, create, update and search pages and databases inside your Notion workspace",
+    "category": "Productivity",
+    "tags": ["notion", "notes", "pages", "database", "workspace", "wiki", "docs"],
+    "use_cases": [
+      "save notes to Notion",
+      "create a new Notion page",
+      "search through Notion workspace",
+      "update existing Notion pages",
+      "read content from Notion database",
+      "add rows to a Notion database",
+      "organize ideas in Notion",
+      "create meeting notes"
+    ],
+    "github_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/notion",
+    "npm_package": "@modelcontextprotocol/server-notion",
+    "supported_os": ["mac", "windows", "linux"],
+    "supported_editors": ["claude", "cursor", "vscode"],
+    "config_template": {
+      "mcpServers": {
+        "notion": {
+          "command": "npx",
+          "args": ["-y", "@modelcontextprotocol/server-notion"],
+          "env": {
+            "NOTION_API_KEY": "YOUR_NOTION_API_KEY"
+          }
+        }
+      }
+    },
+    "stars": 2100
+  },
+  {
+    "name": "Slack",
+    "description": "Send messages, read channels, manage threads and search across your Slack workspace",
+    "category": "Communication",
+    "tags": ["slack", "messages", "channels", "teams", "chat", "notify", "workspace"],
+    "use_cases": [
+      "send a Slack message to a channel",
+      "read messages from a Slack channel",
+      "search Slack conversations",
+      "post a notification to Slack",
+      "list all Slack channels",
+      "reply to a thread",
+      "send a direct message",
+      "get recent messages from a channel"
+    ],
+    "github_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/slack",
+    "npm_package": "@modelcontextprotocol/server-slack",
+    "supported_os": ["mac", "windows", "linux"],
+    "supported_editors": ["claude", "cursor", "vscode"],
+    "config_template": {
+      "mcpServers": {
+        "slack": {
+          "command": "npx",
+          "args": ["-y", "@modelcontextprotocol/server-slack"],
+          "env": {
+            "SLACK_BOT_TOKEN": "YOUR_SLACK_BOT_TOKEN",
+            "SLACK_TEAM_ID": "YOUR_SLACK_TEAM_ID"
+          }
+        }
+      }
+    },
+    "stars": 1800
+  },
+  {
+    "name": "PostgreSQL",
+    "description": "Connect your AI to a PostgreSQL database to run queries, inspect schemas and manage data",
+    "category": "Databases",
+    "tags": ["postgres", "postgresql", "sql", "database", "db", "query", "tables"],
+    "use_cases": [
+      "run SQL queries on a postgres database",
+      "read data from a database table",
+      "inspect database schema",
+      "insert or update rows in a table",
+      "list all tables in the database",
+      "query my database",
+      "analyze data in postgres",
+      "create database tables"
+    ],
+    "github_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/postgres",
+    "npm_package": "@modelcontextprotocol/server-postgres",
+    "supported_os": ["mac", "windows", "linux"],
+    "supported_editors": ["claude", "cursor", "vscode", "windsurf"],
+    "config_template": {
+      "mcpServers": {
+        "postgres": {
+          "command": "npx",
+          "args": ["-y", "@modelcontextprotocol/server-postgres", "postgresql://localhost/mydb"],
+          "env": {}
+        }
+      }
+    },
+    "stars": 2600
+  },
+  {
+    "name": "SQLite",
+    "description": "Interact with a local SQLite database file — run queries, create tables and inspect data",
+    "category": "Databases",
+    "tags": ["sqlite", "sql", "database", "local", "db", "file", "query"],
+    "use_cases": [
+      "query a local sqlite database",
+      "create tables in sqlite",
+      "insert data into sqlite",
+      "read from a local database file",
+      "inspect sqlite schema",
+      "run sql on a local database",
+      "manage a lightweight database"
+    ],
+    "github_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/sqlite",
+    "npm_package": "@modelcontextprotocol/server-sqlite",
+    "supported_os": ["mac", "windows", "linux"],
+    "supported_editors": ["claude", "cursor", "vscode"],
+    "config_template": {
+      "mcpServers": {
+        "sqlite": {
+          "command": "npx",
+          "args": ["-y", "@modelcontextprotocol/server-sqlite", "--db-path", "/path/to/your.db"],
+          "env": {}
+        }
+      }
+    },
+    "stars": 980
+  },
+  {
+    "name": "Filesystem",
+    "description": "Give your AI access to read, write, move and search files on your local filesystem",
+    "category": "Files",
+    "tags": ["files", "filesystem", "local", "read", "write", "folder", "directory"],
+    "use_cases": [
+      "read a file from my computer",
+      "write content to a file",
+      "list files in a folder",
+      "create a new file",
+      "move or rename files",
+      "search for files by name",
+      "delete a file",
+      "manage local documents"
+    ],
+    "github_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/filesystem",
+    "npm_package": "@modelcontextprotocol/server-filesystem",
+    "supported_os": ["mac", "windows", "linux"],
+    "supported_editors": ["claude", "cursor", "vscode", "windsurf"],
+    "config_template": {
+      "mcpServers": {
+        "filesystem": {
+          "command": "npx",
+          "args": ["-y", "@modelcontextprotocol/server-filesystem", "/path/to/allowed/directory"],
+          "env": {}
+        }
+      }
+    },
+    "stars": 3100
+  },
+  {
+    "name": "Brave Search",
+    "description": "Search the web using Brave Search API and get real-time results without tracking",
+    "category": "Browser & Web",
+    "tags": ["search", "web", "brave", "internet", "browse", "query", "results"],
+    "use_cases": [
+      "search the web for information",
+      "find recent news articles",
+      "look up current events",
+      "research a topic online",
+      "get real time information from the web",
+      "find websites about a topic",
+      "search for documentation"
+    ],
+    "github_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/brave-search",
+    "npm_package": "@modelcontextprotocol/server-brave-search",
+    "supported_os": ["mac", "windows", "linux"],
+    "supported_editors": ["claude", "cursor", "vscode"],
+    "config_template": {
+      "mcpServers": {
+        "brave-search": {
+          "command": "npx",
+          "args": ["-y", "@modelcontextprotocol/server-brave-search"],
+          "env": {
+            "BRAVE_API_KEY": "YOUR_BRAVE_API_KEY"
+          }
+        }
+      }
+    },
+    "stars": 1500
+  },
+  {
+    "name": "Puppeteer",
+    "description": "Control a real Chrome browser — navigate pages, click elements, fill forms and take screenshots",
+    "category": "Browser & Web",
+    "tags": ["browser", "puppeteer", "chrome", "scrape", "automate", "screenshot", "web", "click"],
+    "use_cases": [
+      "automate a web browser",
+      "take a screenshot of a website",
+      "fill and submit web forms",
+      "scrape content from a webpage",
+      "click buttons on a website",
+      "navigate to a URL and extract data",
+      "test a web application",
+      "interact with a website automatically"
+    ],
+    "github_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/puppeteer",
+    "npm_package": "@modelcontextprotocol/server-puppeteer",
+    "supported_os": ["mac", "windows", "linux"],
+    "supported_editors": ["claude", "cursor", "vscode"],
+    "config_template": {
+      "mcpServers": {
+        "puppeteer": {
+          "command": "npx",
+          "args": ["-y", "@modelcontextprotocol/server-puppeteer"],
+          "env": {}
+        }
+      }
+    },
+    "stars": 2200
+  },
+  {
+    "name": "Google Drive",
+    "description": "Access, search, read and manage files and documents stored in Google Drive",
+    "category": "Files",
+    "tags": ["google drive", "drive", "files", "google", "documents", "storage", "cloud"],
+    "use_cases": [
+      "read files from Google Drive",
+      "search for documents in Google Drive",
+      "list files in a Drive folder",
+      "access a Google Doc",
+      "find a spreadsheet in Drive",
+      "manage cloud files",
+      "download a file from Drive"
+    ],
+    "github_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/gdrive",
+    "npm_package": "@modelcontextprotocol/server-gdrive",
+    "supported_os": ["mac", "windows", "linux"],
+    "supported_editors": ["claude", "cursor", "vscode"],
+    "config_template": {
+      "mcpServers": {
+        "gdrive": {
+          "command": "npx",
+          "args": ["-y", "@modelcontextprotocol/server-gdrive"],
+          "env": {
+            "GDRIVE_CLIENT_ID": "YOUR_CLIENT_ID",
+            "GDRIVE_CLIENT_SECRET": "YOUR_CLIENT_SECRET"
+          }
+        }
+      }
+    },
+    "stars": 1400
+  },
+  {
+    "name": "Google Maps",
+    "description": "Search for places, get directions, geocode addresses and explore location data via Google Maps",
+    "category": "Productivity",
+    "tags": ["maps", "google maps", "location", "directions", "places", "geocode", "navigate"],
+    "use_cases": [
+      "search for nearby places",
+      "get directions between two locations",
+      "find the address of a place",
+      "geocode a street address",
+      "look up a business location",
+      "find restaurants near me",
+      "calculate travel time"
+    ],
+    "github_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/google-maps",
+    "npm_package": "@modelcontextprotocol/server-google-maps",
+    "supported_os": ["mac", "windows", "linux"],
+    "supported_editors": ["claude", "cursor", "vscode"],
+    "config_template": {
+      "mcpServers": {
+        "google-maps": {
+          "command": "npx",
+          "args": ["-y", "@modelcontextprotocol/server-google-maps"],
+          "env": {
+            "GOOGLE_MAPS_API_KEY": "YOUR_GOOGLE_MAPS_API_KEY"
+          }
+        }
+      }
+    },
+    "stars": 870
+  },
+  {
+    "name": "Linear",
+    "description": "Manage Linear issues, projects, teams and cycles — the issue tracker for modern software teams",
+    "category": "Dev Tools",
+    "tags": ["linear", "issues", "project", "tasks", "tickets", "sprint", "engineering"],
+    "use_cases": [
+      "create a new Linear issue",
+      "list open issues in a project",
+      "update the status of an issue",
+      "search Linear for a bug",
+      "assign an issue to a team member",
+      "get issues in current sprint",
+      "manage engineering tasks",
+      "add comments to an issue"
+    ],
+    "github_url": "https://github.com/linear/linear-mcp",
+    "npm_package": "@linear/mcp-server",
+    "supported_os": ["mac", "windows", "linux"],
+    "supported_editors": ["claude", "cursor", "vscode"],
+    "config_template": {
+      "mcpServers": {
+        "linear": {
+          "command": "npx",
+          "args": ["-y", "@linear/mcp-server"],
+          "env": {
+            "LINEAR_API_KEY": "YOUR_LINEAR_API_KEY"
+          }
+        }
+      }
+    },
+    "stars": 760
+  },
+  {
+    "name": "Jira",
+    "description": "Create, read, update and search Jira issues, projects and sprints in Atlassian",
+    "category": "Dev Tools",
+    "tags": ["jira", "atlassian", "issues", "tickets", "sprints", "bugs", "project management"],
+    "use_cases": [
+      "create a Jira ticket",
+      "list issues in a Jira project",
+      "update a Jira issue status",
+      "search Jira for bugs",
+      "get issues assigned to me",
+      "add a comment to a Jira ticket",
+      "manage sprints in Jira",
+      "track bugs and features"
+    ],
+    "github_url": "https://github.com/atlassian/jira-mcp",
+    "npm_package": "@atlassian/jira-mcp",
+    "supported_os": ["mac", "windows", "linux"],
+    "supported_editors": ["claude", "cursor", "vscode"],
+    "config_template": {
+      "mcpServers": {
+        "jira": {
+          "command": "npx",
+          "args": ["-y", "@atlassian/jira-mcp"],
+          "env": {
+            "JIRA_URL": "https://yourcompany.atlassian.net",
+            "JIRA_EMAIL": "YOUR_EMAIL",
+            "JIRA_API_TOKEN": "YOUR_JIRA_API_TOKEN"
+          }
+        }
+      }
+    },
+    "stars": 620
+  },
+  {
+    "name": "Obsidian",
+    "description": "Read and write notes in your local Obsidian vault — search, create and link notes",
+    "category": "Productivity",
+    "tags": ["obsidian", "notes", "markdown", "vault", "knowledge", "personal", "writing"],
+    "use_cases": [
+      "read notes from Obsidian vault",
+      "create a new note in Obsidian",
+      "search through Obsidian notes",
+      "find linked notes",
+      "write markdown notes",
+      "manage a personal knowledge base",
+      "add content to an existing note"
+    ],
+    "github_url": "https://github.com/MarkusPfundstein/mcp-obsidian",
+    "npm_package": "mcp-obsidian",
+    "supported_os": ["mac", "windows", "linux"],
+    "supported_editors": ["claude", "cursor", "vscode"],
+    "config_template": {
+      "mcpServers": {
+        "obsidian": {
+          "command": "npx",
+          "args": ["-y", "mcp-obsidian", "/path/to/your/vault"],
+          "env": {}
+        }
+      }
+    },
+    "stars": 540
+  },
+  {
+    "name": "Fetch",
+    "description": "Fetch any URL and extract clean content — great for reading web pages, APIs and RSS feeds",
+    "category": "Browser & Web",
+    "tags": ["fetch", "http", "url", "web", "api", "scrape", "content", "rss"],
+    "use_cases": [
+      "fetch content from a URL",
+      "read a web page",
+      "call a REST API endpoint",
+      "extract text from a website",
+      "download data from a public API",
+      "read an RSS feed",
+      "get HTML from a page"
+    ],
+    "github_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/fetch",
+    "npm_package": "@modelcontextprotocol/server-fetch",
+    "supported_os": ["mac", "windows", "linux"],
+    "supported_editors": ["claude", "cursor", "vscode", "windsurf"],
+    "config_template": {
+      "mcpServers": {
+        "fetch": {
+          "command": "npx",
+          "args": ["-y", "@modelcontextprotocol/server-fetch"],
+          "env": {}
+        }
+      }
+    },
+    "stars": 2900
+  },
+  {
+    "name": "AWS S3",
+    "description": "Access and manage files in Amazon S3 buckets — read, upload, list and delete objects",
+    "category": "Files",
+    "tags": ["aws", "s3", "cloud", "storage", "buckets", "files", "amazon"],
+    "use_cases": [
+      "read files from S3 bucket",
+      "upload a file to S3",
+      "list objects in an S3 bucket",
+      "delete files from S3",
+      "manage cloud file storage",
+      "access AWS S3 data",
+      "download files from S3"
+    ],
+    "github_url": "https://github.com/aws/aws-mcp-servers",
+    "npm_package": "@aws/mcp-server-s3",
+    "supported_os": ["mac", "windows", "linux"],
+    "supported_editors": ["claude", "cursor", "vscode"],
+    "config_template": {
+      "mcpServers": {
+        "s3": {
+          "command": "npx",
+          "args": ["-y", "@aws/mcp-server-s3"],
+          "env": {
+            "AWS_ACCESS_KEY_ID": "YOUR_ACCESS_KEY",
+            "AWS_SECRET_ACCESS_KEY": "YOUR_SECRET_KEY",
+            "AWS_REGION": "us-east-1"
+          }
+        }
+      }
+    },
+    "stars": 490
+  },
+  {
+    "name": "Supabase",
+    "description": "Connect your AI directly to a Supabase project — query tables, call functions and manage data",
+    "category": "Databases",
+    "tags": ["supabase", "postgres", "database", "sql", "backend", "tables", "functions"],
+    "use_cases": [
+      "query a Supabase database",
+      "read rows from a Supabase table",
+      "insert data into Supabase",
+      "call Supabase edge functions",
+      "inspect Supabase table schema",
+      "manage backend data",
+      "update records in Supabase"
+    ],
+    "github_url": "https://github.com/supabase-community/supabase-mcp",
+    "npm_package": "@supabase/mcp-server-supabase",
+    "supported_os": ["mac", "windows", "linux"],
+    "supported_editors": ["claude", "cursor", "vscode"],
+    "config_template": {
+      "mcpServers": {
+        "supabase": {
+          "command": "npx",
+          "args": ["-y", "@supabase/mcp-server-supabase", "--url", "YOUR_SUPABASE_URL", "--key", "YOUR_SUPABASE_KEY"],
+          "env": {}
+        }
+      }
+    },
+    "stars": 830
+  },
+  {
+    "name": "MongoDB",
+    "description": "Interact with MongoDB databases — query collections, insert documents and manage indexes",
+    "category": "Databases",
+    "tags": ["mongodb", "nosql", "database", "documents", "collections", "mongo", "db"],
+    "use_cases": [
+      "query a MongoDB collection",
+      "insert a document into MongoDB",
+      "find documents matching a filter",
+      "update documents in MongoDB",
+      "delete documents from MongoDB",
+      "list all collections",
+      "aggregate MongoDB data"
+    ],
+    "github_url": "https://github.com/mongodb-labs/mongodb-mcp-server",
+    "npm_package": "@mongodb-js/mongodb-mcp-server",
+    "supported_os": ["mac", "windows", "linux"],
+    "supported_editors": ["claude", "cursor", "vscode"],
+    "config_template": {
+      "mcpServers": {
+        "mongodb": {
+          "command": "npx",
+          "args": ["-y", "@mongodb-js/mongodb-mcp-server"],
+          "env": {
+            "MONGODB_URI": "mongodb://localhost:27017"
+          }
+        }
+      }
+    },
+    "stars": 410
+  },
+  {
+    "name": "Redis",
+    "description": "Read and write data to a Redis instance — get, set, list keys and manage data structures",
+    "category": "Databases",
+    "tags": ["redis", "cache", "key-value", "database", "store", "memory", "fast"],
+    "use_cases": [
+      "get a value from Redis",
+      "set a key in Redis",
+      "list all keys in Redis",
+      "delete a Redis key",
+      "work with Redis lists and hashes",
+      "manage a cache store",
+      "store temporary data in Redis"
+    ],
+    "github_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/redis",
+    "npm_package": "@modelcontextprotocol/server-redis",
+    "supported_os": ["mac", "windows", "linux"],
+    "supported_editors": ["claude", "cursor", "vscode"],
+    "config_template": {
+      "mcpServers": {
+        "redis": {
+          "command": "npx",
+          "args": ["-y", "@modelcontextprotocol/server-redis"],
+          "env": {
+            "REDIS_URL": "redis://localhost:6379"
+          }
+        }
+      }
+    },
+    "stars": 380
+  },
+  {
+    "name": "Discord",
+    "description": "Read messages, send notifications and interact with Discord servers and channels",
+    "category": "Communication",
+    "tags": ["discord", "chat", "messages", "server", "channels", "bot", "community"],
+    "use_cases": [
+      "send a message to a Discord channel",
+      "read messages from Discord",
+      "post a notification to Discord",
+      "list Discord channels",
+      "interact with a Discord server",
+      "monitor Discord messages",
+      "send a Discord DM"
+    ],
+    "github_url": "https://github.com/v-3/discordmcp",
+    "npm_package": "discord-mcp",
+    "supported_os": ["mac", "windows", "linux"],
+    "supported_editors": ["claude", "cursor", "vscode"],
+    "config_template": {
+      "mcpServers": {
+        "discord": {
+          "command": "npx",
+          "args": ["-y", "discord-mcp"],
+          "env": {
+            "DISCORD_BOT_TOKEN": "YOUR_DISCORD_BOT_TOKEN"
+          }
+        }
+      }
+    },
+    "stars": 340
+  },
+  {
+    "name": "Stripe",
+    "description": "Manage Stripe payments, customers, subscriptions, invoices and financial data",
+    "category": "Productivity",
+    "tags": ["stripe", "payments", "billing", "subscriptions", "invoices", "finance", "customers"],
+    "use_cases": [
+      "list Stripe customers",
+      "view recent payments",
+      "check subscription status",
+      "create a Stripe invoice",
+      "look up a payment intent",
+      "manage billing data",
+      "get revenue information from Stripe"
+    ],
+    "github_url": "https://github.com/stripe/agent-toolkit",
+    "npm_package": "@stripe/agent-toolkit",
+    "supported_os": ["mac", "windows", "linux"],
+    "supported_editors": ["claude", "cursor", "vscode"],
+    "config_template": {
+      "mcpServers": {
+        "stripe": {
+          "command": "npx",
+          "args": ["-y", "@stripe/agent-toolkit"],
+          "env": {
+            "STRIPE_SECRET_KEY": "YOUR_STRIPE_SECRET_KEY"
+          }
+        }
+      }
+    },
+    "stars": 920
+  },
+  {
+    "name": "Sentry",
+    "description": "Access Sentry error tracking — list issues, read stack traces and manage error data",
+    "category": "Dev Tools",
+    "tags": ["sentry", "errors", "bugs", "monitoring", "exceptions", "stack trace", "debugging"],
+    "use_cases": [
+      "list recent errors in Sentry",
+      "read a Sentry issue stack trace",
+      "search for a specific error",
+      "get error frequency data",
+      "monitor application errors",
+      "debug crashes using Sentry",
+      "check error status in production"
+    ],
+    "github_url": "https://github.com/getsentry/sentry-mcp",
+    "npm_package": "@sentry/mcp-server",
+    "supported_os": ["mac", "windows", "linux"],
+    "supported_editors": ["claude", "cursor", "vscode"],
+    "config_template": {
+      "mcpServers": {
+        "sentry": {
+          "command": "npx",
+          "args": ["-y", "@sentry/mcp-server"],
+          "env": {
+            "SENTRY_AUTH_TOKEN": "YOUR_SENTRY_TOKEN",
+            "SENTRY_ORG": "YOUR_ORG_SLUG"
+          }
+        }
+      }
+    },
+    "stars": 560
+  },
+  {
+    "name": "Figma",
+    "description": "Access Figma designs, components, frames and styles — extract design context for coding",
+    "category": "Dev Tools",
+    "tags": ["figma", "design", "ui", "components", "frames", "styles", "frontend"],
+    "use_cases": [
+      "read Figma design components",
+      "extract design tokens from Figma",
+      "get frame details from a Figma file",
+      "convert Figma designs to code",
+      "inspect UI components in Figma",
+      "access design system in Figma",
+      "get colors and typography from Figma"
+    ],
+    "github_url": "https://github.com/figma/figma-developer-mcp",
+    "npm_package": "@figma/mcp-server-figma",
+    "supported_os": ["mac", "windows", "linux"],
+    "supported_editors": ["claude", "cursor", "vscode"],
+    "config_template": {
+      "mcpServers": {
+        "figma": {
+          "command": "npx",
+          "args": ["-y", "@figma/mcp-server-figma"],
+          "env": {
+            "FIGMA_API_KEY": "YOUR_FIGMA_API_KEY"
+          }
+        }
+      }
+    },
+    "stars": 1100
+  },
+  {
+    "name": "Vercel",
+    "description": "Manage Vercel deployments, projects, domains and environment variables",
+    "category": "Dev Tools",
+    "tags": ["vercel", "deployment", "hosting", "serverless", "domains", "build", "frontend"],
+    "use_cases": [
+      "list recent Vercel deployments",
+      "check deployment status",
+      "manage Vercel projects",
+      "add environment variables to Vercel",
+      "get deployment logs",
+      "list Vercel domains",
+      "trigger a new deployment"
+    ],
+    "github_url": "https://github.com/vercel/mcp-adapter",
+    "npm_package": "@vercel/mcp-adapter",
+    "supported_os": ["mac", "windows", "linux"],
+    "supported_editors": ["claude", "cursor", "vscode"],
+    "config_template": {
+      "mcpServers": {
+        "vercel": {
+          "command": "npx",
+          "args": ["-y", "@vercel/mcp-adapter"],
+          "env": {
+            "VERCEL_TOKEN": "YOUR_VERCEL_TOKEN"
+          }
+        }
+      }
+    },
+    "stars": 480
+  },
+  {
+    "name": "Google Calendar",
+    "description": "Read, create and manage Google Calendar events, schedules and meeting invites",
+    "category": "Productivity",
+    "tags": ["calendar", "google calendar", "events", "schedule", "meetings", "appointments"],
+    "use_cases": [
+      "read upcoming calendar events",
+      "create a new calendar event",
+      "check my schedule for today",
+      "find free time slots",
+      "update a calendar event",
+      "delete a calendar event",
+      "list meetings for the week",
+      "schedule a meeting"
+    ],
+    "github_url": "https://github.com/modelcontextprotocol/servers/tree/main/src/google-calendar",
+    "npm_package": "@modelcontextprotocol/server-google-calendar",
+    "supported_os": ["mac", "windows", "linux"],
+    "supported_editors": ["claude", "cursor", "vscode"],
+    "config_template": {
+      "mcpServers": {
+        "google-calendar": {
+          "command": "npx",
+          "args": ["-y", "@modelcontextprotocol/server-google-calendar"],
+          "env": {
+            "GOOGLE_CLIENT_ID": "YOUR_CLIENT_ID",
+            "GOOGLE_CLIENT_SECRET": "YOUR_CLIENT_SECRET"
+          }
+        }
+      }
+    },
+    "stars": 710
+  },
+  {
+    "name": "Todoist",
+    "description": "Manage Todoist tasks, projects and productivity workflows — create, update and complete tasks",
+    "category": "Productivity",
+    "tags": ["todoist", "tasks", "todo", "productivity", "projects", "reminders"],
+    "use_cases": [
+      "create a new task in Todoist",
+      "list all my tasks",
+      "complete a Todoist task",
+      "add a task with a due date",
+      "manage my to-do list",
+      "create a project in Todoist",
+      "get tasks due today"
+    ],
+    "github_url": "https://github.com/abhiz123/todoist-mcp-server",
+    "npm_package": "todoist-mcp-server",
+    "supported_os": ["mac", "windows", "linux"],
+    "supported_editors": ["claude", "cursor", "vscode"],
+    "config_template": {
+      "mcpServers": {
+        "todoist": {
+          "command": "npx",
+          "args": ["-y", "todoist-mcp-server"],
+          "env": {
+            "TODOIST_API_TOKEN": "YOUR_TODOIST_API_TOKEN"
+          }
+        }
+      }
+    },
+    "stars": 290
+  },
+  {
+    "name": "Airtable",
+    "description": "Read and write Airtable bases and tables — manage records, fields and views",
+    "category": "Productivity",
+    "tags": ["airtable", "spreadsheet", "database", "records", "tables", "no-code", "data"],
+    "use_cases": [
+      "read records from Airtable",
+      "create a new Airtable record",
+      "update existing Airtable records",
+      "list all tables in an Airtable base",
+      "search Airtable for a record",
+      "manage a content database",
+      "delete records from Airtable"
+    ],
+    "github_url": "https://github.com/rashidazahrawi/airtable-mcp",
+    "npm_package": "airtable-mcp",
+    "supported_os": ["mac", "windows", "linux"],
+    "supported_editors": ["claude", "cursor", "vscode"],
+    "config_template": {
+      "mcpServers": {
+        "airtable": {
+          "command": "npx",
+          "args": ["-y", "airtable-mcp"],
+          "env": {
+            "AIRTABLE_API_KEY": "YOUR_AIRTABLE_API_KEY",
+            "AIRTABLE_BASE_ID": "YOUR_BASE_ID"
+          }
+        }
+      }
+    },
+    "stars": 250
+  },
+  {
+    "name": "Cloudflare",
+    "description": "Manage Cloudflare Workers, KV, R2, D1 and other Cloudflare services via AI",
+    "category": "Dev Tools",
+    "tags": ["cloudflare", "workers", "edge", "kv", "r2", "d1", "serverless", "cdn"],
+    "use_cases": [
+      "deploy a Cloudflare Worker",
+      "read from Cloudflare KV store",
+      "write to Cloudflare R2 bucket",
+      "query a Cloudflare D1 database",
+      "manage Cloudflare DNS records",
+      "list Cloudflare Workers",
+      "monitor Cloudflare analytics"
+    ],
+    "github_url": "https://github.com/cloudflare/mcp-server-cloudflare",
+    "npm_package": "@cloudflare/mcp-server-cloudflare",
+    "supported_os": ["mac", "windows", "linux"],
+    "supported_editors": ["claude", "cursor", "vscode"],
+    "config_template": {
+      "mcpServers": {
+        "cloudflare": {
+          "command": "npx",
+          "args": ["-y", "@cloudflare/mcp-server-cloudflare"],
+          "env": {
+            "CLOUDFLARE_API_TOKEN": "YOUR_CLOUDFLARE_API_TOKEN"
+          }
+        }
+      }
+    },
+    "stars": 680
+  }
+]
