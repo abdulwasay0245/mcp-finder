@@ -8,8 +8,36 @@ import html from 'shiki/dist/langs/html.mjs'
 const geist = Geist({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'MCP Finder — Find the right MCP server for what you want to do',
-  description: 'Search and discover Model Context Protocol servers by what you want your AI to do. Get instant config for Claude, Cursor, VS Code and more.',
+  title: {
+    default: 'MCP Finder — Find the right MCP server for what you want to do',
+    template: '%s — MCP Finder'
+  },
+  description:
+    'Search and discover Model Context Protocol servers by what you want your AI to do. Get instant config for Claude, Cursor, VS Code and Windsurf.',
+  keywords: [
+    'MCP',
+    'Model Context Protocol',
+    'MCP servers',
+    'Claude',
+    'Cursor',
+    'AI tools',
+    'MCP config'
+  ],
+  openGraph: {
+    title: 'MCP Finder — Find the right MCP server for what you want to do',
+    description:
+      'Search MCP servers by what you want your AI to do. Get instant config for Claude, Cursor, VS Code and Windsurf.',
+    url: 'https://mcpfinder.dev',
+    siteName: 'MCP Finder',
+    locale: 'en_US',
+    type: 'website'
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'MCP Finder',
+    description: 'Find the right MCP server for what you want to do'
+  },
+  metadataBase: new URL('https://mcpfinder.dev')
 }
 
 export default function RootLayout({

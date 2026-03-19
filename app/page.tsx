@@ -17,6 +17,7 @@ async function getServers(): Promise<MCPServer[]> {
 
   return data ?? []
 }
+export const revalidate = 3600
 
 export default async function Home() {
   const servers = await getServers()
