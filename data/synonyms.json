@@ -1,0 +1,22 @@
+{
+  "email":      ["gmail", "inbox", "mail", "message", "outlook", "send", "receive"],
+  "save":       ["store", "write", "create", "persist", "add", "insert"],
+  "read":       ["fetch", "get", "retrieve", "access", "view", "load"],
+  "automate":   ["schedule", "trigger", "run", "workflow", "cron", "automatic"],
+  "database":   ["postgres", "mysql", "sql", "sqlite", "db", "mongodb", "supabase"],
+  "files":      ["filesystem", "documents", "storage", "drive", "folder", "directory"],
+  "code":       ["github", "git", "repository", "pr", "commits", "gitlab", "repo"],
+  "notify":     ["alert", "push", "notification", "slack", "ping", "discord"],
+  "search":     ["find", "query", "look up", "discover", "filter"],
+  "browser":    ["web", "scrape", "puppeteer", "playwright", "chrome", "navigate"],
+  "notes":      ["notion", "obsidian", "markdown", "document", "wiki", "writing"],
+  "tasks":      ["todo", "jira", "linear", "issue", "ticket", "project", "todoist"],
+  "calendar":   ["events", "schedule", "meetings", "appointments", "google calendar"],
+  "payments":   ["stripe", "billing", "invoice", "subscription", "finance"],
+  "deploy":     ["vercel", "hosting", "deployment", "build", "release"],
+  "monitor":    ["sentry", "errors", "logs", "debug", "exceptions", "crashes"],
+  "design":     ["figma", "ui", "components", "wireframe", "mockup"],
+  "cloud":      ["aws", "s3", "storage", "bucket", "cloudflare", "cdn"],
+  "messages":   ["chat", "slack", "discord", "telegram", "dm", "channel"],
+  "data":       ["airtable", "spreadsheet", "table", "rows", "records", "csv"]
+}
